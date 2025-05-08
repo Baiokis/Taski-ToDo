@@ -25,7 +25,7 @@ Widget _buildHeaderLogo() {
     children: [
       SvgPicture.asset('assets/images/logo.svg', width: 25, height: 25),
       SizedBox(width: 10),
-      Text('Taski', style: textStyleHeader),
+      Text('Taski', style: textHeader),
     ],
   );
 }
@@ -33,7 +33,7 @@ Widget _buildHeaderLogo() {
 Widget _buildHeaderUser(String name, String avatar) {
   return Row(
     children: [
-      Text(name, style: textStyleHeader),
+      Text(name, style: textHeader),
       SizedBox(width: 10),
       CircleAvatar(radius: 20, backgroundImage: AssetImage(avatar)),
     ],

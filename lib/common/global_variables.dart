@@ -8,8 +8,11 @@ const color_white = Color(0xffffffff);
 const color_backgroundCard = Color(0xfff5f7f9);
 const color_textGrey = Color(0xffa9b5ca);
 const color_red = Color(0xfffd5e5e);
+const color_darkgrey = Color(0xff3F3D56);
 
 //Assets
+const font = 'Urbanist';
+
 const logo = 'assets/images/logo.svg';
 const note = 'assets/images/note.svg';
 const create = 'assets/images/create.svg';
@@ -20,12 +23,50 @@ const done = 'assets/images/done.svg';
 const search = 'assets/images/search.svg';
 const tablePicture = 'assets/images/tablePicture.svg';
 const todo = 'assets/images/todo.svg';
-
-const font = 'Urbanist';
+const reticence = 'assets/images/reticence.svg';
 
 //Text Styles
-const textStyleHeader = TextStyle(
+const TextStyle textHeader = TextStyle(
   fontSize: 20,
   fontFamily: font,
   fontWeight: FontWeight.w400,
+);
+
+const TextStyle textTodoPageName = TextStyle(
+  fontFamily: font,
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: color_blue,
+);
+
+const TextStyle textTodoPageWelcome = TextStyle(
+  fontFamily: font,
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: color_darkgrey,
+);
+
+const TextStyle textTodoPageDot = TextStyle(
+  fontFamily: font,
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: color_darkgrey,
+);
+
+const TextStyle textTodoPageSubTitle = TextStyle(
+  fontFamily: font,
+  fontSize: 16,
+  fontWeight: FontWeight.w400,
+  color: color_textGrey,
+);
+
+const TextStyle textTaskCardTitle = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w600,
+  color: color_darkgrey,
+);
+
+const TextStyle textTaskCardDescription = TextStyle(
+  fontSize: 14,
+  color: color_textGrey,
 );
