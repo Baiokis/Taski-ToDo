@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taski/common/global_variables.dart';
+import 'package:taski/common/widgets/headerTodoPage.dart';
 import 'package:taski/common/widgets/taskCard.dart';
 
 class TodoPage extends StatefulWidget {
@@ -65,44 +65,10 @@ class _TodoPageState extends State<TodoPage> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        children: [_buildTodoHeaer(numTask, name), _buildTodoCards(tasks)],
+        children: [Headertodopage(numTask, name), _buildTodoCards(tasks)],
       ),
     );
   }
-}
-
-Widget _buildTodoHeaer(numTask, name) {
-  return Column(
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              children: [
-                Text('Welcome, ', style: textTodoPageWelcome),
-                Text(name, style: textTodoPageName),
-                Text('.', style: textTodoPageDot),
-              ],
-            ),
-          ),
-        ],
-      ),
-      Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              "You've got $numTask tasks to do today.",
-              style: textTodoPageSubTitle,
-            ),
-          ],
-        ),
-      ),
-    ],
-  );
 }
 
 Widget _buildTodoCards(tasks) {

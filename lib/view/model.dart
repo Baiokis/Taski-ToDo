@@ -3,8 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:taski/common/global_variables.dart';
 import 'package:taski/common/widgets/header.dart';
 import 'package:taski/view/createPage.dart';
+import 'package:taski/view/donePage.dart';
 import 'package:taski/view/searchPage.dart';
 import 'package:taski/view/todoPage.dart';
+import 'package:taski/view/todoPageEmpty.dart';
 
 class ModelPage extends StatefulWidget {
   const ModelPage({super.key});
@@ -39,12 +41,12 @@ class _ModelPageState extends State<ModelPage> {
         children: [
           const Header(),
           _selectedIndex == 0
-              ? TodoPage()
+              ? TodoPageEmpty()
               : _selectedIndex == 1
               ? Createpage()
               : _selectedIndex == 2
               ? SearchPage()
-              : SearchPage(),
+              : DonePage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
