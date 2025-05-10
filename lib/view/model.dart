@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:taski/common/global_variables.dart';
+import 'package:taski/common/widgets/createTaskModal.dart';
 import 'package:taski/common/widgets/header.dart';
-import 'package:taski/view/createPage.dart';
 import 'package:taski/view/donePage.dart';
 import 'package:taski/view/searchPage.dart';
 import 'package:taski/view/todoPage.dart';
@@ -42,7 +42,14 @@ class _ModelPageState extends State<ModelPage> {
           _selectedIndex == 0
               ? TodoPage()
               : _selectedIndex == 1
-              ? Createpage()
+              ? Builder(
+                builder: (context) {
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    showCreateTaskModal(context);
+                  });
+                  return Container(); // Placeholder widget
+                },
+              )
               : _selectedIndex == 2
               ? SearchPage()
               : DonePage(),
@@ -70,6 +77,15 @@ class _ModelPageState extends State<ModelPage> {
           );
         }),
       ),
+    );
+  }
+
+  void showCreateTaskModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => CreateTaskModal(),
     );
   }
 }
