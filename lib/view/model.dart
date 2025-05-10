@@ -6,7 +6,6 @@ import 'package:taski/view/createPage.dart';
 import 'package:taski/view/donePage.dart';
 import 'package:taski/view/searchPage.dart';
 import 'package:taski/view/todoPage.dart';
-import 'package:taski/view/todoPageEmpty.dart';
 
 class ModelPage extends StatefulWidget {
   const ModelPage({super.key});
@@ -41,7 +40,7 @@ class _ModelPageState extends State<ModelPage> {
         children: [
           const Header(),
           _selectedIndex == 0
-              ? TodoPageEmpty()
+              ? TodoPage()
               : _selectedIndex == 1
               ? Createpage()
               : _selectedIndex == 2

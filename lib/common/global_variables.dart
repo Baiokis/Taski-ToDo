@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 //Colors
 const color_blue = Color(0xff007FFF);
+const color_softBlue = Color(0xffe6f2ff);
 const color_white = Color(0xffffffff);
 const color_backgroundCard = Color(0xfff5f7f9);
 const color_textGrey = Color(0xffa9b5ca);
@@ -24,6 +25,7 @@ const search = 'assets/images/search.svg';
 const tablePicture = 'assets/images/tablePicture.svg';
 const todo = 'assets/images/todo.svg';
 const reticence = 'assets/images/reticence.svg';
+const plus = 'assets/images/plus.svg';
 
 //Text Styles
 const TextStyle textHeader = TextStyle(
@@ -69,4 +71,17 @@ const TextStyle textTaskCardTitle = TextStyle(
 const TextStyle textTaskCardDescription = TextStyle(
   fontSize: 14,
   color: color_textGrey,
+);
+
+const TextStyle textTodoPageEmptyButton = TextStyle(
+  color: color_blue,
+  fontSize: 16,
+  fontWeight: FontWeight.w700,
+  fontFamily: font,
+);
+
+const TextStyle textTodoPageEmptyMessage = TextStyle(
+  color: color_textGrey,
+  fontSize: 16,
+  fontFamily: font,
 );
